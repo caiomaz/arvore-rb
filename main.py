@@ -281,7 +281,7 @@ class RedBlackTree:
 
         return is_balanced_util(self.root, black_count, 0)  # Chama a função auxiliar para verificar se a árvore está balanceada
 
-def plot_red_black_tree(tree):
+def plot(tree):
     """
     Função para plotar a árvore Rubro-Negra usando o NetworkX e o Matplotlib.
     """
@@ -391,34 +391,10 @@ def interface():
         elif option == "3":  # Se a opção escolhida for verificar se a árvore está balanceada
             print("A árvore está balanceada:", rb_tree.check_balanced())  # Verifica se a árvore está balanceada e imprime o resultado
         elif option == "4":  # Se a opção escolhida for plotar a árvore Rubro-Negra
-            plot_red_black_tree(rb_tree)  # Chama a função para plotar a árvore
+            plot(rb_tree)  # Chama a função para plotar a árvore
         elif option == "5":  # Se a opção escolhida for sair
             break  # Sai do loop
         else:
             print("Opção inválida. Tente novamente.")  # Imprime uma mensagem de erro se a opção escolhida for inválida
 
 interface()  # Chama a função 'interface' para iniciar a interação com a árvore Rubro-Negra
-
-"""
-# Exemplo de uso da árvore Rubro-Negra
-
-rb_tree = RedBlackTree()  # Cria uma nova instância da classe RedBlackTree
-rb_tree.insert(10)  # Insere o valor 10 na árvore
-rb_tree.insert(20)  # Insere o valor 20 na árvore
-rb_tree.insert(30)  # Insere o valor 30 na árvore
-rb_tree.insert(40)  # Insere o valor 40 na árvore
-rb_tree.insert(50)  # Insere o valor 50 na árvore
-rb_tree.insert(60)  # Insere o valor 60 na árvore
-
-print("Árvore Rubro-Negra após inserção:")
-rb_tree.inorder(rb_tree.root)  # Realiza um percurso em ordem na árvore e imprime as chaves e cores dos nós
-
-print("A árvore está balanceada:", rb_tree.check_balanced())  # Verifica se a árvore está balanceada e imprime o resultado
-
-rb_tree.remove(30)  # Remove o nó com a chave 30 da árvore
-
-print("Árvore Rubro-Negra após remoção:")
-rb_tree.inorder(rb_tree.root)  # Realiza um percurso em ordem na árvore e imprime as chaves e cores dos nós
-
-print("A árvore está balanceada:", rb_tree.check_balanced())  # Verifica se a árvore está balanceada e imprime o resultado
-"""
